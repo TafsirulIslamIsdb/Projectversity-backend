@@ -48,8 +48,8 @@ exports.createpost = async (req, res) => {
       Description,
       Status,
       Owner_Name,
-      Image: req.file.path,
-      Profile_Url: userData.Image,
+      image: req.file.path,
+      Profile_Url: userData.image,
       usertblUserID: userData.User_ID,
     };
     const post = await Post.create(data);

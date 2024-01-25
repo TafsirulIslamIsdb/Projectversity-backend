@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const user = require("../../controllers/users/users.controller");
 const auth = require("../../middlewares/auth");
-const { upload, singleUpload } = require("../../middlewares/upload");
+const { singleUpload } = require("../../middlewares/upload");
 
 router.post("/signup", singleUpload, user.signup);
 router.post("/login", user.login);
